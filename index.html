@@ -129,22 +129,24 @@ Va falloir un petit schéma de cour de récré.
 This remarkable experiment shows that :</p>
 <ul>
   <li>The G2-&gt; S transition seems to be possible only when a new cell cycle begins, i.e. only after the M phase, so the transition S/G2 is irreversible (unidirectionality).</li>
-  <li>The G2 -&gt; M transition is only possible when the S phase has ended, this is an example of phase order constraint.
-If we reason in terms of a system of transitions, two phases x and y are temporally isolated if it is not possible to reach y from x and x from y by any path without passing through a transition state that certifies that phase x has ended.</li>
+  <li>The G2 -&gt; M transition is only possible when the S phase has ended, this is an example of phase order constraint.</li>
 </ul>
+
+<p>If we reason in terms of a system of transitions, two phases x and y are temporally isolated if it is not possible to reach y from x by any path without passing through a transition state that certifies that phase x has ended. Furthermore, there is no way to reach x from y without passing through a state of y that certifies that y is a completed phase (a scheme is coming, plus I need to test a new graphic tablet…).</p>
 
 <p>Discrete formalisms for modelling biological regulations, such as boolean networks or Thomas’ formalism, are well suited to the study of temporal phase separation, described by these forbidden paths between phases. 
 Thomas’ formalism has been coupled with formal methods for selecting discrete models, such as model-checking or Hoare’s logic. The idea was simple: only those models are selected which satisfy the interaction graph given as input, as well as dynamic specifications on observed biological traces (Hoare logic) or broader dynamic specifications such as CTL.
-The interaction graph of mammalian cell cycle progression used for the proof-of-concept was entirely renovated from <a href="https://theses.hal.science/tel-01962051">Jonathan Behaegel’s</a> seminal model, itself an update and discretization of <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(08)00863-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008634%3Fshowall%3Dtrue">Tyson and Novak’s</a> model.</p>
+The interaction graph of mammalian cell cycle progression used for the proof-of-concept was entirely renovated from <a href="https://theses.hal.science/tel-01962051">Jonathan Behaegel’s</a> seminal model, itself an update and discretization of <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(08)00863-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008634%3Fshowall%3Dtrue">Tyson and Novak’s</a> model.<br />
+Thanks to all these materials, my Ph.D team and I was able to model the checkpoints G1/S, S/G2, G2/M and the metaphase/anaphase transition checkpoint, thus proving that a checkpoint is a discrete, non-continuous, concept.</p>
 
-<p>Thanks to all these materials, I was able to model the checkpoints G1/S, S/G2, G2/M and the metaphase/anaphase transition checkpoint, thus proving that a checkpoint is a discrete, non-continuous, concept.<br />
-Would you like to find out more? Go to the Publications tab below.</p>
+<p>Would you like to find out more? Go to the Publications tab below.</p>
 
 <p>A checkpoint in the broadest sense constrains any type of event. I took the example of the cell cycle in my thesis since the problem focuses on a single physiological system which turns out to be the most documented example in biology. 
 Complicating the issue, metabolism is intrinsically involved in the progression of the cell cycle. 
 The circadian system coordinates physiological processes over 24 hours. Apart from the chronometric aspect, my thesis poses an open question: does the circadian system act as a checkpoint between the phases of the cell cycle (G1, S, G2, M) and metabolism (oxydative, reductive)? 
 <!---
 À compléter, lire Zotero, etc. 
+Find the ref. 
 --></p>
 
 <h3 id="more-about-my-first-postdoc">More About My (First) Postdoc</h3>
@@ -402,7 +404,7 @@ International Journal of Computer Vision (IJCV)
         
       </footer>
     </div>
-    <script src="/minimal-light/assets/js/scale.fix.js"></script>
+    <script src="/assets/js/scale.fix.js"></script>
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
