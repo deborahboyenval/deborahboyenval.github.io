@@ -1,0 +1,96 @@
+\RequirePackage{filecontents}
+\begin{filecontents*}{moderncvcolorcustom.sty}
+%% start of file `moderncvcolorburgundy.sty'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+%-------------------------------------------------------------------------------
+%                identification
+%-------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moderncvcolorcustom}[Modern curriculum vitae and letter color scheme: custom]
+
+%-------------------------------------------------------------------------------
+%                color scheme definition
+%-------------------------------------------------------------------------------
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{rgb}{0.5,0,.63}% violet
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\endinput
+%% end of file `moderncvcolorcustom.sty'.
+\end{filecontents*}
+
+
+\documentclass[12pt,a4paper]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{custom}
+\usepackage[utf8]{inputenc}
+\usepackage[inline]{enumitem}
+% Marge aux 4 coins de la page, ici elles sont réduites pour gagner de la place
+\usepackage[top=1.0cm, bottom=1.0cm, left=1.6cm, right=1.6cm]{geometry}
+% Largeur de la colonne de gauche pour les dates
+\setlength{\hintscolumnwidth}{2.7cm}
+\firstname{\textcolor{darkblue}{Déborah}}
+\familyname{\textcolor{darkblue}{Boyenval}}
+\title{Postdoctoral Fellow at Bordeaux}
+%\address{Vaasankatu 6 A}{00500 Helsinki}
+\email{boyenval@i3s.unice.fr}
+\homepage{deborahboyenval.github.io}
+\extrainfo{Born 02/12/1994}
+\begin{document}
+\maketitle
+% Marge négative entre le titre et la partie expérience, pour gagner de la place
+\vspace*{-2.5\baselineskip}
+\section{Academic Background}
+\cventry{Jan. 2024 -\\Jan. 2025}{Postdoctoral Fellow}{Influence of aging on hematopoietic cell differentiation: from single-cell data to eXplicative formal models}{Laboratoire Bordelais de Recherche en Informatique (Bordeaux, France).}{}{with Loïc Paulevé}
+\cventry{Oct. 2018 -\\Dec. 2022}{PhD in Computer Science}{Formal modelling of cyclic biological behaviours with checkpoints: the cell cycle regulation}{Laboratoire d'Informatique Signaux et Systèmes de Sophia Antipolis, Institut de Biologie de Valrose, Université Côte d'Azur}{\emph{Fondation Université Côte d'Azur Ph.D thesis award 2024.}}{Supervised by Gilles Bernot, Jean-Paul Comet and Franck Delaunay}
+\cventry{Oct. 2021 -\\ Sept. 2022}{Part-time ATER}{}{Université Côte d'Azur}{}{}
+\cventry{Jan.-Jun.\\2018}{Master 2 Internship}{Mathematical modeling of sex-specific chronotoxicity of an anticancer
+drug: the irinotecan}{INSERM U935 Villejuif, Team Chronotherapy and Cancer}{}{Supervised by Annabelle Ballesta}
+\cventry{Fev.-Jun.\\2017}{Master 1 Internship}{Study and qualitative modelling of a pathway for the synchronisation of peripheral circadian clocks by the suprachiasmatic nucleus}{Laboratoire d'Informatique Signaux et Systèmes de Sophia Antipolis, Institut de Biologie de Valrose, Université Côte d'Azur}{}{Supervised by Gilles Bernot, Jean-Paul Comet and Franck Delaunay}
+\cventry{2016 -- 2018}{Master in Life Sciences, Université Côte d'Azur}{Major in Biology, Informatics and Mathematics (BIM)}{Université Côte d'Azur}{}{}
+\cventry{Jun. 2016 \\ Jul. 2016}{Bachelor Internship}{Study of the reciprocal link between the nervous system and the immune system}{Institut de Pharmacologie Moléculaire et Cellulaire, Université Côte d'Azur}{}{Supervised by Pr. Nicolas Glaichenhaus and Franck Ceppo}
+\cventry{2013 -- 2016}{Bachelor in Life Sciences, Université Côte d'Azur}{Specialization in Biology, Informatics and Mathematics (BIM) in the 3rd year}{Université Côte d'Azur}{}{}
+\section{Teaching Assistant}
+\cventry{2018 -- 2021}{Teaching Assistant}{1st and 2nd year BSc, MSc}{Web Introduction and Application, System and Network Administration, Database Theory and SQL, Imperative Programming and Python, Algorithms for Biology}{Université Côte d'Azur}{}{}{}
+\section{Publications}
+\subsection{Publications}
+\cventry{2022}{Sex and Circadian Timing Modulate Oxaliplatin Hematological and Hematopoietic Toxicities}{Dulong Sandrine, Souza Lucas, Machowiak Jean, Peuteman Benoit, Duvallet Gaelle, Boyenval Déborah, Roth Elise, Asgarova Afag, Chang Yunhua, Li Xiao-Mei, Foudi Adlen, and Ballesta Annabelle}{\emph{Pharmaceutics, vol. 14, pp. 2465, Nov, 2022}}{}{}
+\subsection{Proceedings}
+\cventry{2024}{BoNesis: a Python-based declarative environment for the verification, reprogramming, and synthesis of Most Permissive Boolean networks}{Stéphanie Chevalier, Déborah Boyenval, Gustavo Magaña-Lopez, Théo Roncalli, Athénaïs Vaginay, Loïc Paulevé}{18th International Conference on Computational Methods in Systems Biology (CMSB 2024), June, 2024}{}{}
+\cventry{2020}{What is a cell cycle checkpoint? The ToTemBioNet answer}{Boyenval Déborah, Bernot Gilles, Collavizza Hélène, and Comet Jean-Paul}{18th International Conference on Computational Methods in Systems Biology (CMSB 2020), Sep, 2020}{}{}
+%\subsection{Preprints}
+%\cventry{2023}{A purely discrete formalisation and formal verification of intrinsic cell cycle checkpoints: a proof of concept with Prolog and TotemBioNet}{Boyenval Déborah, Bernot Gilles, Collavizza Hélène, Comet Jean-Paul and Delaunay Franck}{To be submitted to Journal of Theoretical Biology}{}{}
+\section{Oral Communications}
+\subsection{Talks}
+\cventry{September 2022}{Formal modeling of biological cyclic behavior with checkpoints: the case of the cell cycle with CTL Model-checking}{Women In Machine Learning and Data Science}{UPMC Paris VI}{}{}
+\cventry{March 2022}{A discrete modelling study devoted to the formalization and verification of mammalian cell cycle checkpoints}{Lifeware Public Seminar}{Inria Saclay}{}{}
+\cventry{November 2021}{Mammalian cell cycle: formalizing phases}{GT-Bioss Annual Day, Lyon}{}{}{}
+\cventry{June 2021}{Logical modelling in biology through the case study of the cell cycle and its checkpoints}{Public Seminar of the Institute of Biology of Valrose}{Nice}{}{}{}
+\cventry{November 2020}{Study of cell cycle checkpoints: specification and verification}{GT-BIOSS Mensual Seminars}{Remote}{}{}{}
+\cventry{September 2020}{What is a cell cycle checkpoint, The TotemBioNet answer}{CMSB 2020}{Remote}{}{}{}
+\cventry{April 2021}{From phase characterization toward observable properties verification}{Public PhD Seminar, NeuroMod Institute}{Sophia Antipolis}{}{}{}
+\subsection{Poster Sessions}
+\cventry{July 2021}{JOBIM 2021}{Logical and incremental formalization of cell cycle checkpoints}{Remote}{}{}{}
+\cventry{November 2019}{Modelife Annual Meeting}{Introduction of Priorities in Biological Regulatory Networks}{Frejus France}{}{}{}
+\cventry{June 2019}{Summer School Formal Modeling of Biological Regulatory Networks}{A discrete cell cycle model, From phase characterization toward observable properties verification}{Porquerolles}{}{}{}
+\section{Modeling skills}
+\cvitem{Formal modeling}{Design of biological regulatory network, CTL model-checking, Hoare logic, Software engineering, Prolog, René Thomas' formalism, Synthesis of boolean networks, Answer-Set Programming}
+\cvitem{EDOs system}{CMAES, Sensitivity Analysis, Circadian data analysis (Cosinor)}{}{}{}{}{}{}
+\cvitem{Statistics}{Trajectory inference, RNA velocity analysis, Application on hematopoetic systems}{}{}{}{}{}{}
+\cvitem{Omics}{Analysis of multimodal omics data (sc-RNA-seq and CITE-seq)}{}{}{}{}{}{}
+\cvitem{Biological background}{Cancer biology, Cell cycle regulation, Circadian system, PK-PD of certain anti-cancer drugs}
+\section{Programming skills}
+\cvitem{Programmation}{Python, Prolog, R, Matlab, Java, SQL, HTML3/CSS5/PHP/Javascript/Ajax, Shell, \LaTeX, Git}{}{}{}{}{}{}
+\cvitem{Tools}{Moodle (Creation of online teaching materials), PyMol}
+\cvitem{Biological Databases}{Protein DataBank, Genome browsers (Ensembl, UCSC), Uniprot, Prosite, Reactome, CollectTRI}
+\section{Associative}
+\cventry{2018 -- 2019}{Fablab manager}{UCA Valrose campus}{Support for 3D printing projects (Ultimaker)}{}{}
+\cventry{2019 -- 2021}{Treasurer of ADAMS-DS4H (Association of Doctoral And Master's Students of DS4H)}{}{Search for financial partnerships, organisation of academic events (CV and poster workshops) and federative events (integration party and sports events)}{}{}
+\section{Languages}
+Native French, Fluent English
+\end{document}
