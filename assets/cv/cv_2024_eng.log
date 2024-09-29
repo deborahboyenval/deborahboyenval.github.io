@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.11)  29 SEP 2024 22:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.11)  30 SEP 2024 00:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -869,6 +869,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--47
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 48.
+
+Underfull \hbox (badness 7613) in paragraph at lines 55--55
+[]|\OT1/cmr/bx/n/12 (+20) Master in Life Sci-ences, Uni-ver-sit^^Se C^ote d'Azu
+r\OT1/cmr/m/n/12 (+20) , \OT1/cmr/m/sl/12 (+20) Ma-jor in
+ []
+
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
@@ -911,10 +917,10 @@ c/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsl12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti12.pfb>
-Output written on cv_2024_eng.pdf (3 pages, 190863 bytes).
+Output written on cv_2024_eng.pdf (3 pages, 191057 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 140 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  16 named destinations out of 1000 (max. 500000)
  28781 words of extra memory for PDF output out of 29859 (max. 10000000)
 
