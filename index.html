@@ -135,15 +135,17 @@ Va falloir un petit schéma de cour de récré.
 -->
 This remarkable experiment shows that :</p>
 <ul>
-  <li>The \(G2 \rightarrow S\) transition seems to be possible only when a new cell cycle begins, i.e. only after the M phase, so the transition S/G2 is irreversible (unidirectionality).</li>
-  <li>The \(G2 \rightarrow M\) transition is only possible when the S phase has ended, this is an example of phase order constraint.</li>
+  <li>The G2 –&gt; S transition seems to be possible only when a new cell cycle begins, i.e. only after the M phase, so the transition S/G2 is irreversible (unidirectionality).</li>
+  <li>The G2 –&gt; M transition is only possible when the S phase has ended, this is an example of phase order constraint.</li>
 </ul>
 
-<p>If we reason in terms of <a href="https://en.wikipedia.org/wiki/Transition_system">transition system</a>, two phases \(x\) and \(y\) are temporally isolated if it is not possible to reach \(y\) from \(x\) by any path without passing through a transition state that certifies that phase \(x\) has ended. Furthermore, there is no way to reach \(x\) from \(y\) without passing through a state of \(y\) that certifies that \(y\) is a completed phase.</p>
+<p>If we reason in terms of <a href="https://en.wikipedia.org/wiki/Transition_system">transition system</a>, two phases x and y are temporally isolated if it is not possible to reach y from x by any path without passing through a transition state that certifies that phase x has ended. Furthermore, there is no way to reach x from y without passing through a state of y that certifies that y is a completed phase.</p>
+
+<p><img src="/assets/img/naif_sep_temp.png" alt="Image" width="30%" style="display:block; margin-left:auto; margin-right:auto" /></p>
 
 <p>Discrete formalisms for modelling biological regulatory networks, such as boolean/multivaluated networks or Thomas’ formalism, are well suited to the study of temporal phase separation, described by these forbidden paths between phases. 
 Thomas’ formalism has been coupled with formal methods for selecting discrete models, such as model-checking or Hoare’s logic. The idea was simple: only those models are selected which satisfy the interaction graph given as input, as well as dynamic specifications on observed biological traces (Hoare logic) or broader dynamic specifications such as CTL.
-The interaction graph of mammalian cell cycle progression used for the proof-of-concept was entirely renovated from <a href="https://theses.hal.science/tel-01962051">Jonathan Behaegel’s</a> seminal model, itself an update and discretization of <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(08)00863-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008634%3Fshowall%3Dtrue">Tyson and Novak’s</a> model.<br />
+The interaction graph of mammalian cell cycle progression used for the proof-of-concept was entirely renovated from <a href="https://theses.hal.science/tel-01962051">Jonathan Behaegel’s</a> seminal model, itself an update and discretization of <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(08)00863-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008634%3Fshowall%3Dtrue">Tyson and Novak’s</a> model. I have abstracted each phase of the cell cycle by a set of activation or inhibition events of the cell cycle regulators from the rich literature available on the subject. Based on these phases specification that have been formally proven correct using Hoare logic, it was then possible to reason about the notion of temporal separation with model-checking of CTL formulas. 
 Thanks to all these materials, my Ph.D team and I were able to model the checkpoints G1/S, S/G2, G2/M and the metaphase/anaphase transition checkpoint, thus proving that a checkpoint is a discrete, non-continuous, concept.</p>
 
 <p><em>Would you like to find out more? Go to the Publications tab below.</em></p>
