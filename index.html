@@ -2,7 +2,6 @@
 <html lang="en-US">
   <head>
     <title>Déborah Boyenval | Laboratoire de Recherche en Informatique de Bordeaux (LaBRI, France)</title>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +27,15 @@
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     
-
+      <!-- for mathjax support -->
+      
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+      </script>
+      <script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
   </head>
   <body>
     <div class="wrapper">
@@ -86,12 +93,12 @@
 
 <p>I’m currently a postdoctoral fellow at <a href="https://www.labri.fr/">LaBRI</a> in the MTV team with Loïc Paulevé. I’m also working with the <a href="https://www.bricbordeaux.com/">BRIC</a>’s sc-RNA Seq data on the application of formal methods developed within the <a href="https://bnediction.github.io/">BNeDiction project</a> to explain the phenotype of uncoupling of Hematopoietic Stem Cells (HSCs) from hematopoiesis in aged mice, a phenotype related to a decline in the development of the lymphoid lineage and immunodeficiency.</p>
 
-<p>During my Ph.D, I started working into the field of formal modeling of biological systems, also called symbolic system biology by the <a href="https://gt-bioss.cnrs.fr/">GT-Bioss</a>. Monthly seminars are organized so feel free to take a look if you’re new to the field! My PhD thesis focuses on the discrete modeling of intrinsic cell cycle checkpoints and was supervised by <a href="">Gilles Bernot</a>, <a href="https://webusers.i3s.unice.fr/~comet/index.php">Jean-Paul Comet</a> and <a href="http://ibv.unice.fr/research-team/delaunay/">Franck Delaunay</a>. I was part of two research teams: the SPARKS team in <a href="https://www.i3s.unice.fr/fr/">I3S lab</a> (Sophia Antipolis, France) specialized in formal methods applied to systems biology, and Franck Delaunay’s team in <a href="http://ibv.unice.fr/">iBV</a> (Nice, France) devoted to the experimental study of interactions between mammalian peripheral circadian clocks, the cell cycle and metabolism under healthy and pathological conditions.</p>
+<p>During my Ph.D, I worked in the field of formal modeling of biological systems, also called symbolic systems biology by the <a href="https://gt-bioss.cnrs.fr/">GT-Bioss</a>. Monthly seminars are organized so feel free to take a look if you’re new to the field! My PhD thesis focuses on the discrete modeling of intrinsic cell cycle checkpoints and was supervised by <a href="">Gilles Bernot</a>, <a href="https://webusers.i3s.unice.fr/~comet/index.php">Jean-Paul Comet</a> and <a href="http://ibv.unice.fr/research-team/delaunay/">Franck Delaunay</a>. I was part of two research teams: the SPARKS team in <a href="https://www.i3s.unice.fr/fr/">I3S lab</a> (Sophia Antipolis, France) specialized in formal methods applied to systems biology, and Franck Delaunay’s team in <a href="http://ibv.unice.fr/">iBV</a> (Nice, France) devoted to the experimental study of interactions between mammalian peripheral circadian clocks, the cell cycle and metabolism under healthy and pathological conditions.</p>
 
 <h2 id="research-interests">Research Interests</h2>
 
 <ul>
-  <li><strong>Discrete modeling of complex biological phenomena:</strong>  formal specification of biological checkpoints in regulatory biological systems, coupling between circadian cycle, cell cycle and metabolism, the link between aging and an altered hematopoiesis</li>
+  <li><strong>Discrete modeling of complex biological phenomena:</strong>  formal specification of biological checkpoints in regulatory biological systems, coupling between circadian cycle, cell cycle and metabolism, the link between aging and an altered hematopoiesis.</li>
   <li><strong>Formal methods applied to system biology:</strong> model-checking, (genetically-modified) Hoare’s logic, automatic parameter identification of a parameterized interaction graph (Thomas’ formalism), ASP, synthesis and reprogramming of boolean networks (more in the application so far)</li>
   <li><strong>Integration of omics data for modeling of discrete biological systems:</strong> RNA velocity analysis, trajectory inference, identification of cellular type boolean signature.</li>
 </ul>
@@ -109,17 +116,17 @@ What are the dynamic characteristics of the coupling itself, apart from the unio
 La notion de phase intervient ici puis thèse des gars (article à citer. 
 --></p>
 
-<p>I propose a focus on the notion of checkpoint, which is described very intuitively as a set of steps that <em>must</em> be completed before starting another. This discrete notion applies reasonably well in the case of cell cycle <em>regulation</em>, since it is described dynamically by a set of <em>switch-like molecular events</em> of activation and inhibition of the cell cycle core regulators. 
+<p>I propose a focus on the notion of <em>biological checkpoint</em>, which is described very intuitively as a set of steps that <em>must</em> be completed before starting another. This discrete notion applies reasonably well in the case of <em>cell cycle regulation</em>, since it is described dynamically by a set of <em>switch-like molecular events</em> of activation and inhibition of the cell cycle core regulators. 
 A checkpoint is thought here as a constraint on the  order of some blocks of cell cycle events named <em>phases</em>.
 Here we refer to the phases :</p>
 <ul>
   <li>S: DNA replication,</li>
-  <li>M: equitable distribution and division of DNA</li>
+  <li>M: Fair distribution and division of DNA</li>
   <li>G1 (prior S) and G2 (prior M): gap phases for energy and biomass resources.</li>
 </ul>
 
 <p>DNA replication and division are highly regulated processes. Errors in DNA copying or distribution in descendant cells must be limited for the survival of the species. 
-A widely cited example cell fusion experiments show that certain phases cannot occur simultaneously and that there is an order of phases to preserve DNA integrity (<a href="https://www.ncbi.nlm.nih.gov/books/NBK9876/figure/A2447/?report=objectonly">Great scheme here</a>). 
+A widely cited example cell fusion experiments show that certain phases cannot occur simultaneously and that there is an order of phases to preserve DNA integrity (<a href="https://www.ncbi.nlm.nih.gov/books/NBK9876/figure/A2447/?report=objectonly">great scheme here</a>). 
 A G2 cell, ready to enter M phase, is merged with an S phase cell. The G2 cell halts its progression and does not enter M phase.
 In addition, the G2 cell does not start a new DNA synthesis phase. 
 This G2 cell appears to be temporally isolated from the S and M phase. 
@@ -128,22 +135,22 @@ Va falloir un petit schéma de cour de récré.
 -->
 This remarkable experiment shows that :</p>
 <ul>
-  <li>The G2-&gt; S transition seems to be possible only when a new cell cycle begins, i.e. only after the M phase, so the transition S/G2 is irreversible (unidirectionality).</li>
-  <li>The G2 -&gt; M transition is only possible when the S phase has ended, this is an example of phase order constraint.</li>
+  <li>The \(G2 \rightarrow S\) transition seems to be possible only when a new cell cycle begins, i.e. only after the M phase, so the transition S/G2 is irreversible (unidirectionality).</li>
+  <li>The \(G2 \rightarrow M\) transition is only possible when the S phase has ended, this is an example of phase order constraint.</li>
 </ul>
 
-<p>If we reason in terms of a system of transitions, two phases x and y are temporally isolated if it is not possible to reach y from x by any path without passing through a transition state that certifies that phase x has ended. Furthermore, there is no way to reach x from y without passing through a state of y that certifies that y is a completed phase (a scheme is coming, plus I need to test a new graphic tablet…).</p>
+<p>If we reason in terms of <a href="https://en.wikipedia.org/wiki/Transition_system">transition system</a>, two phases \(x\) and \(y\) are temporally isolated if it is not possible to reach \(y\) from \(x\) by any path without passing through a transition state that certifies that phase \(x\) has ended. Furthermore, there is no way to reach \(x\) from \(y\) without passing through a state of \(y\) that certifies that \(y\) is a completed phase.</p>
 
-<p>Discrete formalisms for modelling biological regulations, such as boolean networks or Thomas’ formalism, are well suited to the study of temporal phase separation, described by these forbidden paths between phases. 
+<p>Discrete formalisms for modelling biological regulatory networks, such as boolean/multivaluated networks or Thomas’ formalism, are well suited to the study of temporal phase separation, described by these forbidden paths between phases. 
 Thomas’ formalism has been coupled with formal methods for selecting discrete models, such as model-checking or Hoare’s logic. The idea was simple: only those models are selected which satisfy the interaction graph given as input, as well as dynamic specifications on observed biological traces (Hoare logic) or broader dynamic specifications such as CTL.
 The interaction graph of mammalian cell cycle progression used for the proof-of-concept was entirely renovated from <a href="https://theses.hal.science/tel-01962051">Jonathan Behaegel’s</a> seminal model, itself an update and discretization of <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(08)00863-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982208008634%3Fshowall%3Dtrue">Tyson and Novak’s</a> model.<br />
 Thanks to all these materials, my Ph.D team and I were able to model the checkpoints G1/S, S/G2, G2/M and the metaphase/anaphase transition checkpoint, thus proving that a checkpoint is a discrete, non-continuous, concept.</p>
 
-<p>Would you like to find out more? Go to the Publications tab below.</p>
+<p><em>Would you like to find out more? Go to the Publications tab below.</em></p>
 
-<p>A checkpoint in the broadest sense constrains any type of event. I took the example of the cell cycle in my thesis since the problem focuses on a single physiological system which turns out to be the most documented example in biology. 
+<p>A checkpoint in the broadest sense constrains any type of event. I took the example of the cell cycle in my thesis since the problem focuses on a single physiological system which turns out to be the most documented example of checkpoint-regulated system in biology. 
 Complicating the issue, metabolism is intrinsically involved in the progression of the cell cycle. 
-The circadian system coordinates physiological processes over 24 hours. Apart from the chronometric aspect, my thesis poses an open question: does the circadian system act as a checkpoint between the phases of the cell cycle (G1, S, G2, M) and metabolism (oxydative, reductive)? 
+The circadian system coordinates physiological processes over 24 hours. Apart from the chronometric aspect, my thesis poses an open question: does the circadian system act as a checkpoint (i.e. a temporal separator) between the phases of the cell cycle (G1, S, G2, M) and metabolism (oxydative, reductive)? 
 <!---
 À compléter, lire Zotero, etc. 
 Find the ref. 
@@ -160,7 +167,7 @@ Find the ref.
     <p><strong>[June. 2024]</strong> Our paper about BoNesis tool is accepted to <a href="https://biomedinfo.di.unipi.it/cmsb2024/">CMSB 2024</a>.</p>
   </li>
   <li>
-    <p><strong>[June. 2024]</strong> Winner of the <a href="https://newsroom.univ-cotedazur.fr/actualites-evenements/remise-des-prix-annuels-de-la-fondation-universite-cote-dazur">Prix de thèse de la Fondation Université Côte d’Azur</a> (Ph.D thesis award).</p>
+    <p><strong>[June. 2024]</strong> I received the <a href="https://newsroom.univ-cotedazur.fr/actualites-evenements/remise-des-prix-annuels-de-la-fondation-universite-cote-dazur">Prix de thèse de la Fondation Université Côte d’Azur</a> (Ph.D thesis award).</p>
   </li>
 </ul>
 
@@ -199,8 +206,6 @@ Find the ref.
        
       <a href="https://hal.science/hal-04629083v1/bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
       
-       
-      <strong> <i style="color:#e74d3c">Accepted</i></strong>
       
       
     </div>
@@ -271,8 +276,6 @@ Find the ref.
       
       
       
-       
-      <strong> <i style="color:#e74d3c">Accepted</i></strong>
       
       
     </div>
@@ -309,8 +312,6 @@ Find the ref.
       <a href="https://webusers.i3s.unice.fr/bioinfo/en/software.php" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
       
       
-       
-      <strong> <i style="color:#e74d3c">Accepted</i></strong>
       
       
     </div>
@@ -364,6 +365,7 @@ Find the ref.
 
 <h2 id="talks-and-posters">Talks and posters</h2>
 <ul>
+  <li><strong>[Talk, December 2023]</strong> Formal modeling of the discrete dynamics of intrinsic cell cycle checkpoints: a proof of concept at LaBRI (Bordeaux, France).</li>
   <li><strong>[Ph.D Defense, December 2022]</strong> Formal modeling of biological cyclic behavior with checkpoints: the cell cycle regulation at I3S laboratory. <br />
 <a href="/assets/files/PhD_defense_DB.pdf">(Slides)</a>.</li>
   <li><strong>[Talk, March 2022]</strong> A discrete modelling study devoted to the formalization and verification of mammalian cell cycle checkpoints at <a href="https://lifeware.inria.fr/wiki/Main/Seminar">Lifeware Public Seminar</a>. <br />
@@ -400,7 +402,16 @@ International Journal of Computer Vision (IJCV)
 
 <h3 id="teaching">Teaching</h3>
 
-<p>I taught computer science for 3 years during my Ph.D, from bachelor’s degree to master’s degree, from September 2018 to June 2021 at the <a href="https://univ-cotedazur.fr/">Université Côte d’Azur</a> as well as at <a href="https://polytech.univ-cotedazur.fr/">Polytech’ Nice Sophia Antipolis</a>. More details later.</p>
+<p>I taught some computer science courses for 3 years during my Ph.D from September 2018 to June 2021 at the <a href="https://univ-cotedazur.fr/">Université Côte d’Azur</a> as well as at the engineering school <a href="https://polytech.univ-cotedazur.fr/">Polytech’ Nice Sophia Antipolis</a>.</p>
+
+<ul>
+  <li>Systems and network administration (<a href="https://www.polytech-reseau.org/cycle-preparatoire-peip/">PeiP</a> 1st year)</li>
+  <li>Databases theory and its application in SQL (<a href="https://univ-cotedazur.fr/formation/offre-de-formation/ingenieur-genie-biologique">GB</a> 4th year, <a href="https://univ-cotedazur.fr/formation/offre-de-formation/licence-informatique">B.sc.</a> 2nd year)</li>
+  <li>Introduction to the web (<a href="https://www.polytech-reseau.org/cycle-preparatoire-peip/">PeiP</a> 2nd year)</li>
+  <li>Web applications (<a href="https://www.polytech-reseau.org/cycle-preparatoire-peip/">PeiP</a> 2nd year)</li>
+  <li>Algorithmics (<a href="https://univ-cotedazur.fr/formation/offre-de-formation/ingenieur-genie-biologique">GB</a> 4th year)</li>
+  <li>Imperative programming with Python (<a href="https://univ-cotedazur.fr/formation/offre-de-formation/ingenieur-genie-biologique">GB</a> 3rd year, <a href="https://univ-cotedazur.fr/formation/offre-de-formation/licence-informatique">B.sc.</a> 1st year)</li>
+</ul>
 
 <h3 id="science-outreach">Science outreach</h3>
 
